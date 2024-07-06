@@ -8,7 +8,7 @@ import java.util.TimeZone
 
 fun convertTimestampToTime(timestamp: Int?): String {
     if (timestamp == null) return ""
-    val stamp = Timestamp((timestamp * 1000).toLong()) //Timestamp принимает милисекунды, а с сервера приходят секунды
+    val stamp = Timestamp((timestamp * 1000).toLong())
     val date = Date(stamp.time)
     val pattern = "HH:mm:ss"
     val sdf = SimpleDateFormat(pattern, Locale.getDefault())
